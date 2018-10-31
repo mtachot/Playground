@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Playground.Decorator_Pattern;
 using Playground.FactoryPattern;
 using Playground.WrapperPattern;
 
@@ -100,6 +101,24 @@ namespace Playground
                 .BCC("bcc.test@toto.com", "bcc.test2@toto.com", "bcc.test3@toto.com", "bcc.test4@toto.com")
                 .WithSubject("Email subject here")
                 .WithBody("Email body here").Send();
+
+            #endregion
+
+            #region Decorator Pattern
+
+            Console.Clear();
+            title = "Decorator Pattern";
+            Console.WriteLine(separator);
+            Console.WriteLine(String.Format(CultureInfo.InvariantCulture, "\t{0}", title));
+            Console.WriteLine(separator);
+            Console.WriteLine();
+
+            AbstractCoffee coffee = null; // We cannot create instance of abstract class
+            coffee = new Topping(coffee);
+            coffee = new Sugar(coffee);
+            coffee = new Milk(coffee);
+            Console.WriteLine("Coffee with " + coffee.ShowCoffee());
+            Console.ReadLine();
 
             #endregion
         }

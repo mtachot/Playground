@@ -48,6 +48,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Command Pattern\Classes\Account.cs" />
+    <Compile Include="Decorator Pattern\AbstractCoffee.cs" />
+    <Compile Include="Decorator Pattern\Milk.cs" />
+    <Compile Include="Decorator Pattern\Sugar.cs" />
+    <Compile Include="Decorator Pattern\Topping.cs" />
     <Compile Include="Factory\Classes\AirMonster.cs" />
     <Compile Include="Memento Pattern\Customer.cs" />
     <Compile Include="Command Pattern\Classes\Deposit.cs" />
